@@ -16,9 +16,9 @@ import time
 class BasePage (object):
     """klasa bazowa"""
 
-    def __init__(self):
+    def __init__(self,driver):
         self.driver = driver
-        self._verify_page() 
+        self._verify_page()
 
     def _verify_page(self):
         return

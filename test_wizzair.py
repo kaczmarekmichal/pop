@@ -4,8 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from ddt import ddt, data, unpack
-import csv
+from pages.home_page import HomePage
 
 
 import unittest
@@ -25,7 +24,8 @@ class WizzairRegistation(unittest.TestCase):
         self.driver.quit
 
     def test_correct_registation(self):
-        pass
+        home_page = HomePage(self.driver)
+        home_page.click_zaloguj_button()
 
 if __name__== '__main__':
     unittest.main(verbosity=2)
